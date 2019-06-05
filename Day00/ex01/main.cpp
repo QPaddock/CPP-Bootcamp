@@ -4,7 +4,7 @@
 
 int main()
 {
-    Contact cont[7];
+    Contact cont[8];
     int i;
     int j;
     std::string com;
@@ -14,8 +14,8 @@ int main()
 
     while (i == 1)
     {
-        std::cout << "Enter Prompt:\n";
-        std::cin >> com;
+        std::cout << "Enter ADD, SEARCH or EXIT:\n";
+        std::getline(std::cin , com);
 
         if (com == "ADD")
         {
@@ -36,6 +36,7 @@ int main()
         }
         else if (com == "EXIT")
         {
+            std::cout << "Ending...";
             exit(EXIT_SUCCESS);
         }
         else

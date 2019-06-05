@@ -10,6 +10,7 @@ all :
 
 clean :
 	rm -rf $(OUT)
+	rm -rf phonebook.hpp.gch
 
 fclean : clean
 	rm -rf phonebook

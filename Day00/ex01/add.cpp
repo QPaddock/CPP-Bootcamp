@@ -5,7 +5,6 @@ Contact add_con()
     Contact con;
     
     std::cout << "Enter First Name:\n";
-    std::cin.ignore(1, '\n');
     std::getline(std::cin ,con.first);
 
     std::cout << "Enter Last Name:\n";
