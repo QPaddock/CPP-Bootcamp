@@ -1,15 +1,15 @@
 #include "ScavTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : Name(name) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 
-    HitPoints = 100;
-    MaxHitPoints = 100;
-    EnergyPoints = 50;
-    MaxEnergyPoints = 50;
-    Level = 1;
-    MeleeAttack = 20;
-    RangedAttack = 15;
-    ArmorDamage = 3;
+    setHP(100);
+    setMaxHP(100);
+    setEP(50);
+    setMaxEP(50);
+    setLevel(1);
+    setMelee(20);
+    setRanged(15);
+    setArmor(3);
     
     std::cout << this->Name << " : Recompiling my combat code!\n";
 }
@@ -101,25 +101,25 @@ void ScavTrap::challengeNewcomer(std::string const & target) {
 }
 
 void ScavTrap::epicCh(std::string const & target) {
-    std::cout << "You versus me! Me versus you! Either way!\n";
+    std::cout << target << "! You versus me! Me versus you! Either way!\n";
 }
 
 void ScavTrap::lameCh(std::string const & target) {
 
-    std::cout << "I will prove to you my robotic superiority!\n";
+    std::cout << target << "! I will prove to you my robotic superiority!\n";
 }
 
 void ScavTrap::okCh(std::string const & target) {
 
-    std::cout << "Dance battle! Or, you know... regular battle.\n";
+    std::cout << target << "! Dance battle! Or, you know... regular battle.\n";
 }
 
 void ScavTrap::wowCh(std::string const & target) {
 
-    std::cout << "Man versus machine! Very tiny streamlined machine!\n";
+    std::cout << target << "! Man versus machine! Very tiny streamlined machine!\n";
 }
 
 void ScavTrap::byCh(std::string const & target) {
 
-    std::cout << "Care to have a friendly duel?\n";
+    std::cout << target << "! Care to have a friendly duel?\n";
 }

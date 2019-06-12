@@ -1,33 +1,54 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::~ClapTrap() {
-    std::cout << this->Name << " Destroyed\n";
+ClapTrap::ClapTrap() {
+    std::cout << "ClapTrap Created!\n";
 }
-
-ClapTrap::ClapTrap(const ClapTrap &newft) {
-    *this = newft;
-}
-
-#include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(std::string name) : Name(name) {
-
-    HitPoints = 100;
-    MaxHitPoints = 100;
-    EnergyPoints = 100;
-    MaxEnergyPoints = 100;
-    Level = 1;
-    MeleeAttack = 30;
-    RangedAttack = 20;
-    ArmorDamage = 5;
-    
-    std::cout << this->Name << " : Hey everybody! Check out my package!\n";
+    std::cout << this->Name << ": ClapTrap Created!\n";
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << this->Name << " Destroyed\n";
+    std::cout << this->Name << " ClapTrap Destroyed\n";
 }
 
 ClapTrap::ClapTrap(const ClapTrap &newft) {
     *this = newft;
 }
+
+
+void    ClapTrap::setName(std::string name) {
+        this->Name = name;
+    }
+
+    void    ClapTrap::setHP(int value) {
+        this->HitPoints = value;
+    }
+
+    void    ClapTrap::setEP(int value) {
+        this->EnergyPoints = value;
+    }
+
+    void    ClapTrap::setMaxHP(int value) {
+        this->MaxHitPoints = value;
+    }
+
+    void    ClapTrap::setMaxEP(int value) {
+        this->MaxEnergyPoints = value;
+    }
+
+    void    ClapTrap::setLevel(int value) {
+        this->Level = value;
+    }
+
+    void    ClapTrap::setMelee(int value) {
+        this->MeleeAttack = value;
+    }
+
+    void    ClapTrap::setRanged(int value) {
+        this->RangedAttack = value;
+    }
+
+    void    ClapTrap::setArmor(int value) {
+        this->ArmorDamage = value;
+    }

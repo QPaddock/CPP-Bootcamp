@@ -1,5 +1,6 @@
 #include "FragTrap.hpp"
 #include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 
 int main() {
     FragTrap* name = new FragTrap("John");
@@ -18,6 +19,7 @@ int main() {
     delete name;
 
     std::cout << "\n\n";
+    std::cout << "############################################\n";
 
     ScavTrap* x = new ScavTrap("Lewis");
 

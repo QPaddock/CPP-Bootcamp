@@ -1,15 +1,18 @@
 #include "FragTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : Name(name) {
+FragTrap::FragTrap() {
+}
 
-    HitPoints = 100;
-    MaxHitPoints = 100;
-    EnergyPoints = 100;
-    MaxEnergyPoints = 100;
-    Level = 1;
-    MeleeAttack = 30;
-    RangedAttack = 20;
-    ArmorDamage = 5;
+FragTrap::FragTrap(std::string name) : ClapTrap(name) {
+
+    setHP(100);
+    setMaxHP(100);
+    setEP(100);
+    setMaxEP(100);
+    setLevel(1);
+    setMelee(30);
+    setRanged(20);
+    setArmor(5);
     
     std::cout << this->Name << " : Hey everybody! Check out my package!\n";
 }
@@ -18,7 +21,7 @@ FragTrap::~FragTrap() {
     std::cout << this->Name << " Destroyed\n";
 }
 
-FragTrap::FragTrap(const FragTrap &newft) {
+FragTrap::FragTrap(const FragTrap &newft) : ClapTrap(newft) {
     *this = newft;
 }
 

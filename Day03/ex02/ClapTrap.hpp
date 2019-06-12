@@ -6,8 +6,8 @@
 #include <iomanip>
 
 class ClapTrap {
-	private:
-		int HitPoints;
+    protected:
+        int HitPoints;
 		int MaxHitPoints;
 		int EnergyPoints;
 		int MaxEnergyPoints;
@@ -18,11 +18,22 @@ class ClapTrap {
 
 		std::string Name;
 
-	public:
-		ClapTrap(std::string name);
+    public:
+        ClapTrap();
+        ClapTrap(std::string name);
 		~ClapTrap();
 		ClapTrap(const ClapTrap &newft);
 		void operator = (ClapTrap *obj);
+
+        void setName(std::string name);
+        void setHP(int value);
+        void setEP(int value);
+        void setMaxHP(int value);
+        void setMaxEP(int value);
+        void setLevel(int value);
+        void setMelee(int value);
+        void setRanged(int value);
+        void setArmor(int value);
 };
 
 #endif

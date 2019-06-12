@@ -4,9 +4,11 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include "ClapTrap.hpp"
 
-class FragTrap : ClapTrap {
+class FragTrap : public ClapTrap{
 	public:
+		FragTrap();
 		FragTrap(std::string name);
 		~FragTrap();
 		FragTrap(const FragTrap &newft);

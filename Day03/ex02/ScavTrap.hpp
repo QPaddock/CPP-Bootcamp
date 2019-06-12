@@ -4,8 +4,9 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include "ClapTrap.hpp"
 
-class ScavTrap {
+class ScavTrap : public ClapTrap {
 	public:
 		ScavTrap(std::string name);
 		~ScavTrap();
